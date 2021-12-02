@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <h1>Посилання:</h1>
+  <ul class="contacts">
+    <% if (contacts.length) { %>
+      <% contacts.forEach(({ link, name }) => { %>
+        <li class="link">
+          <a href="<%= link %>"><%= name %></a>
+        </li>
+      <% }) %>
+    <% } %>
+  </ul>
+  <img class="img_cont" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnG_k4Lo11wqJWJ3hqaOsH2QDFm6isqxYD8Q&usqp=CAU"/>
+  <p>Build with Node.js Express, EJS, MongoDB</p>
+</body>
+</html>
